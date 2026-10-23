@@ -1,0 +1,42 @@
+<style>
+body{margin:0;background:var(--anatomy-page)}
+.iso-page{width:1080px!important;height:1920px;margin:0!important;position:relative;overflow:hidden;background:var(--anatomy-page)}
+.v-head{position:absolute;left:72px;right:72px;top:96px}
+.v-kicker{font:600 30px/1 var(--anatomy-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--anatomy-muted)}
+.v-title{margin-top:22px;font:800 92px/1.02 ui-sans-serif,system-ui,sans-serif;letter-spacing:-.03em;color:var(--anatomy-strong)}
+.v-cap{position:absolute;left:72px;right:72px;top:290px;min-height:300px}
+.v-step{display:inline-block;padding:10px 20px;border-radius:999px;background:var(--anatomy-strong);color:var(--anatomy-page);font:700 28px/1 var(--anatomy-mono)}
+.v-cap h2{margin:26px 0 0;font:750 58px/1.1 ui-sans-serif,system-ui,sans-serif;letter-spacing:-.02em;color:var(--anatomy-strong)}
+.v-cap p{margin:20px 0 0;font:450 38px/1.4 ui-sans-serif,system-ui,sans-serif;color:var(--anatomy-text)}
+.v-fig{position:absolute;left:10px;width:1060px;top:610px;height:960px;overflow:hidden}
+.v-fig .iso-svg{overflow:hidden;--anatomy-weight:1.1px}
+.v-fig .iso-svg{width:1060px;height:960px}
+.v-stats{position:absolute;left:72px;right:72px;bottom:190px;display:grid;grid-template-columns:1.2fr 1fr 1fr 1.2fr;gap:18px}
+.v-stat{background:var(--anatomy-card);border-radius:22px;padding:22px 24px;box-shadow:var(--anatomy-lift)}
+.v-stat b{display:block;font:700 54px/1 var(--anatomy-mono);color:var(--anatomy-strong);font-variant-numeric:tabular-nums;white-space:nowrap}
+.v-stat span{display:block;margin-top:10px;font:600 22px/1 var(--anatomy-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--anatomy-muted)}
+.v-bar{position:absolute;left:72px;right:72px;bottom:130px;height:8px;border-radius:4px;background:var(--anatomy-faint);overflow:hidden}
+.v-bar i{display:block;height:100%;width:0;background:var(--anatomy-strong)}
+.v-foot{position:absolute;left:72px;right:72px;bottom:60px;font:500 22px/1.3 var(--anatomy-mono);color:var(--anatomy-muted)}
+</style>
+<div class="v-head"><div class="v-kicker">Skutik matic 150 cc · CVT</div><div class="v-title">Cara kerja CVT matic</div></div>
+<div class="v-cap" data-cap><span class="v-step" data-step>1/5</span><h2 data-title></h2><p data-body></p></div>
+<div class="v-fig">__SVG__</div>
+<div class="v-stats">
+  <div class="v-stat"><b data-rpm>1.500</b><span>rpm mesin</span></div>
+  <div class="v-stat"><b data-ratio>2,30</b><span>rasio CVT</span></div>
+  <div class="v-stat"><b data-kmh>0</b><span>km/j</span></div>
+  <div class="v-stat"><b data-grip>lepas</b><span>kopling</span></div>
+</div>
+<div class="v-bar"><i data-progress></i></div>
+<div class="v-foot">Data Vario 150: reduksi akhir 9,966 · roller 18 g. Rasio CVT ±2,3–0,8 dan rpm kopling itu perkiraan.</div>
+<script>
+window.VIDEO_FOCUS = __FOCUS__;
+window.VIDEO_SCENES = [
+  { start: 0, end: 4.5, from: 1500, to: 1500, focus: "case", lit: "belt", title: "Mesin idle, motor diem", body: "Kruk as muter pulley depan, belt ikut muter, pulley belakang juga muter. Tapi kampas kopling belum ngembang, jadi roda masih diem." },
+  { start: 4.5, end: 10, ramp: 3.2, from: 1500, to: 3700, focus: "clutch", lit: "shoes", title: "Gas dibuka, kopling nyambung", body: "Lewat ±2.600 rpm, 3 kampas ganda kelempar keluar sama gaya sentrifugal terus nyengkram mangkok. Tenaga masuk ke gardan, motor jalan." },
+  { start: 10, end: 17.5, ramp: 6, from: 3700, to: 7800, focus: "drive", lit: "rollers", title: "Roller kelempar, rasio berubah", body: "Makin kenceng muter, 6 roller 18 g naik ke luar dan neken piringan depan. Belt naik di depan, turun di belakang. Rasio 2,3 ke 0,8 tanpa oper gigi." },
+  { start: 17.5, end: 22, ramp: 1.5, from: 7800, to: 8500, focus: "case", lit: "belt", title: "Top speed", body: "Belt di diameter paling gede di depan, paling kecil di belakang. Mesin 8.500 rpm, lewat gardan 9,966:1, roda ±100 km/j." },
+  { start: 22, end: 28, ramp: 4.5, from: 8500, to: 1500, focus: "case", lit: "spring", title: "Gas dilepas, semua balik", body: "Roller balik ke dalem, per CVT neken pulley belakang nutup lagi, belt balik ke posisi awal. Di bawah ±2.600 rpm kampas lepas dari mangkok." },
+];
+</script>
